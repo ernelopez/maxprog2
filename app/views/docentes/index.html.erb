@@ -1,0 +1,45 @@
+<div class="container">
+<div class="well">
+
+<h1>Listado de docentes</h1>
+
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>User</th>
+    <th>Pass</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @docentes.each do |docente| %>
+  <tr>
+    <td><%= docente.id %></td>
+    <td><%= docente.user %></td>
+    <td><%= docente.pass %></td>
+    <td><%= docente.name %></td>
+    <td><%= link_to 'Mostrar', docente %></td>
+    <td><%= link_to 'Editar', edit_docente_path(docente) %></td>
+    <td><%= link_to 'Eliminar', docente, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo docente', new_docente_path %>
+
+</div>
+
+
+  <div class="well">
+    <h3>Gestión del proyecto</h3>
+    <div> <%= link_to "Gestionar Provincias", provis_path %> </div>
+    <div> <%= link_to "Gestionar Escuelas", escuelas_path %> </div>
+    <div> <%= link_to "Gestionar Docentes", docentes_path %> </div>
+    <div> <%= link_to "Gestionar Obras", posts_path %> </div>
+  </div>
+
+</div>

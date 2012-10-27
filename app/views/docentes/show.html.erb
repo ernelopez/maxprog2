@@ -1,0 +1,26 @@
+<div class="container">
+<div class="well">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @docente.user %>
+</p>
+
+<p>
+  <b>Pass:</b>
+  <%= @docente.pass %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @docente.name %>
+</p>
+
+
+<%= link_to 'Editar', edit_docente_path(@docente) %> |
+<%= link_to 'Volver', docentes_path %>
+
+</div>
+</div>

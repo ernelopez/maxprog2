@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  obra: MyString
+  autor1: MyString
+  autor2: MyString
+  autor3: MyString
+  autor4: MyString
+  fecha: 2012-10-23
+  file: MyString
+  codigo: MyText
+  escuela_id: 1
+  docente_id: 1
+
+two:
+  obra: MyString
+  autor1: MyString
+  autor2: MyString
+  autor3: MyString
+  autor4: MyString
+  fecha: 2012-10-23
+  file: MyString
+  codigo: MyText
+  escuela_id: 1
+  docente_id: 1

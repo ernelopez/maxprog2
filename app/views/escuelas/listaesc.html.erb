@@ -1,0 +1,88 @@
+<div class="container">
+<div class="well">
+
+<h3>Las escuelas del proyecto</h3>
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th>Institución</th>
+    <!--   <th>IdProvi</th> -->
+    <th>Provincia</th>
+    <th>Enlace</th>
+    <th> </th>
+  </tr>
+
+<% @escuelas.each do |escuela| %>
+  <tr>
+    <td><%= escuela.id %></td>
+    <td><%= escuela.institu %></td>
+    <!-- <td><%= escuela.provi_id %></td> -->
+    <td><%= escuela.provi.prov %></td>
+    <td> <div class="btn btn-info"> Ver obras </div> </td>
+    <td>  </td>
+ 
+  </tr>
+<% end %>
+</table>
+
+</div>
+</div>
+
+
+<% @posts = Post.where(:escuela_id => 3) %>
+<% @posts.each do |post| %>
+<p>
+  <b>Obra:</b>
+  <%= post.obra %>
+</p>
+
+<p>
+  <b>Autor1:</b>
+  <%= post.autor1 %>
+</p>
+
+<p>
+  <b>Autor2:</b>
+  <%= post.autor2 %>
+</p>
+
+<p>
+  <b>Autor3:</b>
+  <%= post.autor3 %>
+</p>
+
+<p>
+  <b>Autor4:</b>
+  <%= post.autor4 %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= post.fecha %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= post.file %>
+</p>
+
+<p>
+  <b>Codigo:</b>
+  <%= post.codigo %>
+</p>
+
+<p>
+  <b>Escuela:</b>
+  <%= post.escuela_id %>
+</p>
+
+<p>
+  <b>Curso:</b>
+  <%= post.curso %>
+</p>
+
+<p>
+  <b>Docente:</b>
+  <%= post.docente_id %>
+</p>
+<% end %>
