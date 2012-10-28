@@ -9,6 +9,7 @@
     <th>User</th>
     <th>Pass</th>
     <th>Name</th>
+    <th>Role</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,6 +21,7 @@
     <td><%= docente.user %></td>
     <td><%= docente.pass %></td>
     <td><%= docente.name %></td>
+    <td><%= docente.role %></td>
     <td><%= link_to 'Mostrar', docente %></td>
     <td><%= link_to 'Editar', edit_docente_path(docente) %></td>
     <td><%= link_to 'Eliminar', docente, method: :delete, data: { confirm: '¿Está seguro?' } %></td>

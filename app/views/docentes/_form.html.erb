@@ -15,17 +15,27 @@
   <tr class="field">
     <td><%= f.label :user %></td>
     <td><%= f.text_field :user %></td>
+    <td>Por ejemplo: eltopogigio</td>
   </tr>
   <tr class="field">
     <td><%= f.label :pass %></td>
     <td><%= f.text_field :pass %></td>
+    <td></td>
   </tr>
   <tr class="field">
     <td><%= f.label :name %></td>
     <td><%= f.text_field :name %></td>
+    <td>Como será llamado. Por ejemplo: Juan D. Perón</td>
+  </tr>
+  <tr class="field">
+    <td><%= f.label :role %></td>
+    <td><%= f.select( :role, options_for_select(["Admin","Profe"]) ) %></td>
+
+    <td></td>
   </tr>
   <tr class="actions">
     <td><%= f.submit %></td>
+    <td></td>
     <td></td>
   </tr>
 </table>

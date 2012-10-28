@@ -18,6 +18,11 @@
   <%= @docente.name %>
 </p>
 
+<p>
+  <b>Role:</b>
+  <%= @docente.role %>
+</p>
+
 
 <%= link_to 'Editar', edit_docente_path(@docente) %> |
 <%= link_to 'Volver', docentes_path %>
