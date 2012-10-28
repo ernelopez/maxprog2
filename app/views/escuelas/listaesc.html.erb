@@ -8,8 +8,7 @@
     <th>Institución</th>
     <!--   <th>IdProvi</th> -->
     <th>Provincia</th>
-    <th>Enlace</th>
-    <th> </th>
+    <th></th>
   </tr>
 
 <% @escuelas.each do |escuela| %>
@@ -18,8 +17,7 @@
     <td><%= escuela.institu %></td>
     <!-- <td><%= escuela.provi_id %></td> -->
     <td><%= escuela.provi.prov %></td>
-    <td> <div class="btn btn-info"> Ver obras </div> </td>
-    <td> <%= link_to 'Ver', obrasxesc_path(escuela.id) %> </td>
+    <td> <%= link_to 'Ver obras', obrasxesc_path(escuela.id) %> </td>
  
   </tr>
 <% end %>
