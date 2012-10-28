@@ -1,62 +1,60 @@
 <div class="container">
-<div class="well">
+  <div class="well">
 
-<h1>Listado de obras</h1>
+    <h1>Listado de obras</h1>
 
-<table class="table">
-  <tr>
-    <th>Id</th>
-    <th>Obra</th>
-    <th>Autor1</th>
-    <th>Autor2</th>
-    <th>Autor3</th>
-    <th>Autor4</th>
-    <th>Fecha</th>
-    <th>EscuelaId</th>
-    <th>Escuela</th>
-    <th>Curso</th>
-    <th>Provincia</th>
-    <th>DocenteId</th>
-    <th>Docente</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li> <%= link_to 'Nueva obra', new_post_path %> </li>
+          <li> <%= link_to "Gestionar provincias", provis_path %> </li>
+          <li> <%= link_to "Gestionar escuelas", escuelas_path %> </li>
+          <li> <%= link_to "Gestionar docentes", docentes_path %> </li>
+        </ul>
+      </div>
+    </div>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.id %></td>
-    <td><%= post.obra %></td>
-    <td><%= post.autor1 %></td>
-    <td><%= post.autor2 %></td>
-    <td><%= post.autor3 %></td>
-    <td><%= post.autor4 %></td>
-    <td><%= post.fecha %></td>
-    <td><%= post.escuela_id %></td>
-    <td><%= post.escuela.institu %></td>
-    <td><%= post.curso %></td>
-    <td><%= post.escuela.provi.prov %></td>
-    <td><%= post.docente_id %></td>
-    <td><%= post.docente.name %></td>
-    <td><%= link_to 'Mostrar', post %></td>
-    <td><%= link_to 'Editar', edit_post_path(post) %></td>
-    <td><%= link_to 'Eliminar', post, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <table class="table">
+      <tr>
+        <th>Id</th>
+        <th>Obra</th>
+        <th>Autor1</th>
+        <th>Autor2</th>
+        <th>Autor3</th>
+        <th>Autor4</th>
+        <th>Fecha</th>
+        <th>EscuelaId</th>
+        <th>Escuela</th>
+        <th>Curso</th>
+        <th>Provincia</th>
+        <th>DocenteId</th>
+        <th>Docente</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<br />
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.obra %></td>
+        <td><%= post.autor1 %></td>
+        <td><%= post.autor2 %></td>
+        <td><%= post.autor3 %></td>
+        <td><%= post.autor4 %></td>
+        <td><%= post.fecha %></td>
+        <td><%= post.escuela_id %></td>
+        <td><%= post.escuela.institu %></td>
+        <td><%= post.curso %></td>
+        <td><%= post.escuela.provi.prov %></td>
+        <td><%= post.docente_id %></td>
+        <td><%= post.docente.name %></td>
+        <td><%= link_to 'Mostrar', post %></td>
+        <td><%= link_to 'Editar', edit_post_path(post) %></td>
+        <td><%= link_to 'Eliminar', post, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<%= link_to 'Nueva obra', new_post_path %>
-
-</div>
-
-<div class="well">
-  <h3>Gestión del proyecto</h3>
-  <div> <%= link_to "Gestionar Provincias", provis_path %> </div>
-  <div> <%= link_to "Gestionar Escuelas", escuelas_path %> </div>
-  <div> <%= link_to "Gestionar Docentes", docentes_path %> </div>
-  <div> <%= link_to "Gestionar Obras", posts_path %> </div>
-</div>
-
+  </div>
 </div>

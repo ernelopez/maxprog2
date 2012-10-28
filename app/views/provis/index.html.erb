@@ -1,39 +1,38 @@
 <div class="container">
-<div class="well">
+  <div class="well">
 
-<h1>Listado de provincias</h1>
+    <h1>Listado de provincias</h1>
 
-<table class="table">
-  <tr>
-    <th>Id</th>
-    <th>Prov</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li> <%= link_to 'Agregar provincia', new_provi_path %> </li>
+          <li> <%= link_to "Gestionar escuelas", escuelas_path %> </li>
+          <li> <%= link_to "Gestionar docentes", docentes_path %> </li>
+          <li> <%= link_to "Gestionar obras", posts_path %></li>
+        </ul>
+      </div>
+    </div>
 
-<% @provis.each do |provi| %>
-  <tr>
-    <td><%= provi.id %></td>
-    <td><%= provi.prov %></td>
-    <td><%= link_to 'Mostrar', provi %></td>
-    <td><%= link_to 'Editar', edit_provi_path(provi) %></td>
-    <td><%= link_to 'Eliminar', provi, method: :delete, data: { confirm: '¿Está seguro' } %></td>
-  </tr>
-<% end %>
-</table>
+    <table class="table">
+      <tr>
+        <th>Id</th>
+        <th>Prov</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<br />
+    <% @provis.each do |provi| %>
+      <tr>
+        <td><%= provi.id %></td>
+        <td><%= provi.prov %></td>
+        <td><%= link_to 'Mostrar', provi %></td>
+        <td><%= link_to 'Editar', edit_provi_path(provi) %></td>
+        <td><%= link_to 'Eliminar', provi, method: :delete, data: { confirm: '¿Está seguro' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<%= link_to 'Nueva provincia', new_provi_path %>
-
-</div>
-
-<div class="well">
-  <h3>Gestión del proyecto</h3>
-  <div> <%= link_to "Gestionar Provincias", provis_path %> </div>
-  <div> <%= link_to "Gestionar Escuelas", escuelas_path %> </div>
-  <div> <%= link_to "Gestionar Docentes", docentes_path %> </div>
-  <div> <%= link_to "Gestionar Obras", posts_path %> </div>
-</div>
+  </div>
 </div>

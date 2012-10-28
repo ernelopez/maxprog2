@@ -1,6 +1,18 @@
 <div class="container">
   <div class="well">
     <h1>Listado de escuelas</h1>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li> <%= link_to 'Agregar escuela', new_escuela_path %> </li>
+          <li> <%= link_to "Gestionar provincias", provis_path %> </li>
+          <li> <%= link_to "Gestionar docentes", docentes_path %> </li>
+          <li> <%= link_to "Gestionar obras", posts_path %></li>
+        </ul>
+      </div>
+    </div>
+
     <table class="table">
       <tr>
         <th>Id</th>
@@ -23,14 +35,5 @@
       </tr>
       <% end %>
     </table>
-    <br />
-    <%= link_to 'Nueva escuela', new_escuela_path %>
-  </div>
-  <div class="well">
-    <h3>Gestión del proyecto</h3>
-    <div> <%= link_to "Gestionar Provincias", provis_path %> </div>
-    <div> <%= link_to "Gestionar Escuelas", escuelas_path %> </div>
-    <div> <%= link_to "Gestionar Docentes", docentes_path %> </div>
-    <div> <%= link_to "Gestionar Obras", posts_path %> </div>
-  </div>
+    </div>
 </div>
