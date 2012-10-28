@@ -88,4 +88,13 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def obrasxesc
+    @posts = Post.where(:escuela_id => params[:id])
+    respond_to do |format|
+      format.html # obrasxesc.html.erb
+      format.json { render json: @post }
+    end
+  end
+
 end

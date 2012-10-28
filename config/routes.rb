@@ -66,6 +66,7 @@ Maxprog::Application.routes.draw do
 
   # Send project code (why post are project?)
   match '/posts/:id/code' => 'posts#show_code', :as => 'show_code'
+  match '/escuelas/:id/posts' => 'posts#obrasxesc', :as => 'obrasxesc'
 
 
   # match '/public/elproyecto' => 'elproyecto'

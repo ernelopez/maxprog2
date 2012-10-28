@@ -1,0 +1,39 @@
+<div class="container">
+<div class="well">
+
+<h3>Obras de la escuela  de  </h3>
+
+<table class="table">
+  <tr>
+    <th>Obra</th>
+    <th>Autores</th>
+    <th>Fecha</th>
+    <th>Escuela</th>
+    <th>Curso</th>
+    <th>Provincia</th>
+    <th>Docente</th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.obra %></td>
+    <td><%= post.autor1 %> <%= post.autor2 %> <%= post.autor3 %> <%= post.autor4 %></td>
+    <td><%= post.fecha %></td>
+    <td><%= post.escuela.institu %></td>
+    <td><%= post.curso %></td>
+    <td><%= post.escuela.provi.prov %></td>
+    <td><%= post.docente.name %></td>
+    <td><%= link_to 'Mostrar', post %></td>
+  </tr>
+<% end %>
+
+  <tr></tr>
+</table>
+
+
+</div>
+</div>
+
+
+
