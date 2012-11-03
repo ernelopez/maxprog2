@@ -1,12 +1,14 @@
-Maxprog::Application.routes.draw do
+Md::Application.routes.draw do
   resources :posts
-
-  resources :docentes
 
   resources :escuelas
 
   resources :provis
 
+  devise_for :users
+  resources :users
+
+	
   get "home/index"
 
   # The priority is based upon order of creation:
@@ -58,8 +60,11 @@ Maxprog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to  => 'home#index'
+
+  root :to => "home#index"
   match '/' => "home#index", :as => :home
+
+  match 'gestion'        => 'gestion#index'
 
   match 'project'        => 'project#index'
   match 'listaesc'       => 'escuelas#listaesc'
@@ -67,9 +72,6 @@ Maxprog::Application.routes.draw do
   # Send project code (why post are project?)
   match '/posts/:id/code' => 'posts#show_code', :as => 'show_code'
   match '/escuelas/:id/posts' => 'posts#obrasxesc', :as => 'obrasxesc'
-
-
-  # match '/public/elproyecto' => 'elproyecto'
 
   # See how all your routes lay out with "rake routes"
 

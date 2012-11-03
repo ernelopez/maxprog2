@@ -1,4 +1,7 @@
 class EscuelasController < ApplicationController
+
+  before_filter :require_admin, :except => [:listaesc]
+
   # GET /escuelas
   # GET /escuelas.json
   def index
@@ -10,7 +13,6 @@ class EscuelasController < ApplicationController
     end
   end
 
-
   def listaesc
     @escuelas = Escuela.all
 
@@ -19,7 +21,6 @@ class EscuelasController < ApplicationController
       format.json { render json: @escuelas }
     end
   end
-
 
   # GET /escuelas/1
   # GET /escuelas/1.json

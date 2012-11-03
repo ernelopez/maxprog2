@@ -17,20 +17,8 @@
     <td><%= f.text_field :obra %></td>
   </tr>
   <tr class="field">
-    <td><%= f.label :autor1 %></td>
-    <td><%= f.text_field :autor1 %></td>
-  </tr>
-  <tr class="field">
-    <td><%= f.label :autor2 %></td>
-    <td><%= f.text_field :autor2 %></td>
-  </tr>
-  <tr class="field">
-    <td><%= f.label :autor3 %></td>
-    <td><%= f.text_field :autor3 %></td>
-  </tr>
-  <tr class="field">
-    <td><%= f.label :autor4 %></td>
-    <td><%= f.text_field :autor4 %></td>
+    <td><%= f.label :autor %></td>
+    <td><%= f.text_field :autor %></td>
   </tr>
   <tr class="field">
     <td><%= f.label :fecha %></td>
@@ -49,12 +37,17 @@
     <td><%= f.text_field :curso %></td>
   </tr>
   <tr class="field">
-    <td><%= f.label :docente_id %></td>
-    <td><%= f.select( :docente_id, options_for_select( Docente.all.map { |d| [d.name, d.id] } ) ) %></td>
+    <td><%= f.label :user_id %></td>
+    <td><%= f.select( :user_id, options_for_select( User.all.map { |d| [d.nombre, d.id] } ) ) %></td>
   <tr class="field">
     <td><%= f.label :comentario %></td>
     <td><%= f.text_area :comentario %></td>
   </tr>
+  <tr class="field">
+    <td><%= f.label :conocimiento %></td>
+    <td><%= f.text_area :conocimiento %></td>
+  </tr>
+
   <tr class="actions">
     <td><%= f.submit %></td>
     <td></td>

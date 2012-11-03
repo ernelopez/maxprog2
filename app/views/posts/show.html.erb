@@ -13,15 +13,15 @@
           <div class="row-fluid">
             <div class="span4">
               <h3> <%= @post.obra %> </h3>
-              <p>Autores: <%= @post.autor1 %> <%= @post.autor2 %> <%= @post.autor3 %> <%= @post.autor4 %></p>
+              <p>Autor: <%= @post.autor %> </p>
               <p>Escuela: <%= @post.escuela.institu %> </p>
               <p>Curso: <%= @post.curso %> </p>
               <p>Año: <%= @post.fecha.year %></p>
-              <p>Docente: <%= @post.docente.name %></p>
+              <p>Docente: <%= @post.user.nombre %></p>
               <p>Provincia: <%= @post.escuela.provi.prov %> </p>
               <p>Fecha de creación: <%= @post.fecha %></p>
-              <p>Inventario: <%= @post.id %></p>
               <p>Comentario: <%= @post.comentario %></p>
+              <p>Conocimientos: <%= @post.conocimiento %></p>
             </div>
             <div class="span8">
                <canvas data-processing-sources="<%= show_code_path(@post.id) %>"></canvas>
@@ -36,15 +36,15 @@
           <div class="row-fluid">
             <div class="span4">
               <h3> <%= @post.obra %> </h3>
-              <p>Autores: <%= @post.autor1 %> <%= @post.autor2 %> <%= @post.autor3 %> <%= @post.autor4 %></p>
+              <p>Autor: <%= @post.autor %> </p>
               <p>Escuela: <%= @post.escuela.institu %> </p>
               <p>Curso: <%= @post.curso %> </p>
               <p>Año: <%= @post.fecha.year %></p>
-              <p>Docente: <%= @post.docente.name %></p>
+              <p>Docente: <%= @post.user.nombre %></p>
               <p>Provincia: <%= @post.escuela.provi.prov %> </p>
               <p>Fecha de creación: <%= @post.fecha %></p>
-              <p>Inventario: <%= @post.id %></p>
               <p>Comentario: <%= @post.comentario %></p>
+              <p>Conocimientos: <%= @post.conocimiento %></p>
             </div>
             <div class="span8">
               <!-- ACA EL CODIGO -->

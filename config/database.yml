@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: maxprog_dev
+  database: md
   pool: 5
   username: ernesto
   password:
@@ -14,7 +14,7 @@ development:
 test: &TEST
   adapter: postgresql
   encoding: utf8
-  database: project_test
+  database: md_test
   pool: 5
   username: ernesto
   password:
@@ -22,7 +22,7 @@ test: &TEST
 production:
   adapter: postgresql
   encoding: utf8
-  database: project_production
+  database: md_production
   pool: 5
   username: ernesto
   password:

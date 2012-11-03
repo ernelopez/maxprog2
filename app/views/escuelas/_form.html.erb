@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-<table class="table">
-  <tr class="field">
-    <td><%= f.label :institu %></td>
-    <td><%= f.text_field :institu %></td>
-  </tr>
-  <tr class="field">
-    <td><%= f.label :provi_id %></td>
-    <td><%= f.select( :provi_id, options_for_select( Provi.all.map { |p| [p.prov, p.id] } ) ) %></td>
-  </tr>
+  <table class="table">
+    <tr class="field">
+      <td><%= f.label :institu %></td>
+      <td><%= f.text_field :institu %></td>
+    </tr>
+    <tr class="field">
+      <td><%= f.label :provi_id %></td>
+      <td><%= f.select( :provi_id, options_for_select( Provi.all.map { |p| [p.prov, p.id] } ) ) %></td>
+    </tr>
 
-  <tr class="actions">
-    <td><%= f.submit %></td>
-    <td></td>
-  </tr>
-</table>
+    <tr class="actions">
+      <td><%= f.submit %></td>
+      <td></td>
+    </tr>
+  </table>
 <% end %>

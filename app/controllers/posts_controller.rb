@@ -1,16 +1,20 @@
 class PostsController < ApplicationController
+
+before_filter :require_admin, :except => [:show, :show_code, :obrasxesc, :new, :create]
+before_filter :require_any, :except => [:index, :edit, :update, :destroy, :show, :show_code, :obrasxesc]
+
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+      @posts = Post.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-    end
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @posts }
+      end
   end
 
-  # GET /posts/1
+  # GET /posts/1	
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
@@ -19,14 +23,6 @@ class PostsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @post }
     end
-  end
-
-  def show_code
-    code = '';
-    if post = Post.find(params[:id])
-      code = post.codigo
-    end
-    render :text => code
   end
 
   # GET /posts/new
@@ -88,6 +84,14 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def show_code
+    code = '';
+    if post = Post.find(params[:id])
+      code = post.codigo
+    end
+    render :text => code
+	  end
 
   def obrasxesc
     @posts = Post.where(:escuela_id => params[:id])

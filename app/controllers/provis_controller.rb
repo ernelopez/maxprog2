@@ -1,4 +1,7 @@
 class ProvisController < ApplicationController
+
+  before_filter :authenticate_user!
+
   # GET /provis
   # GET /provis.json
   def index

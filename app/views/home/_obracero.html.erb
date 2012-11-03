@@ -10,15 +10,15 @@
           <div class="row-fluid">
             <div class="span4">
               <h3><%= @featured_post.obra %></h3>
-              <p>Autores: <%= @featured_post.autor1 %> <%= @featured_post.autor2 %> <%= @featured_post.autor3 %> <%= @featured_post.autor4 %></p>
+              <p>Autor: <%= @featured_post.autor %></p>
               <p>Escuela: <%= @featured_post.escuela.institu %></p>
               <p>Curso: <%= @featured_post.curso %></p>
               <p>Año: <%= @featured_post.fecha.year %></p>
-              <p>Docente: <%= @featured_post.docente.name %></p>
+              <p>Docente: <%= @featured_post.user.nombre %></p>
               <p>Provincia: <%= @featured_post.escuela.provi.prov %></p>
               <p>Fecha de creación: <%= @featured_post.fecha %></p>
-              <p>Inventario: <%= @featured_post.id %></p>
               <p>Comentario: <%= @featured_post.comentario %></p>
+              <p>Conocimientos: <%= @featured_post.conocimiento %></p>
             </div>
             <div class="span8">
               <canvas data-processing-sources="<%= show_code_path(@featured_post.id) %>"></canvas>
@@ -33,15 +33,15 @@
           <div class="row-fluid">
             <div class="span4">
               <h3><%= @featured_post.obra %></h3>
-              <p>Autores: <%= @featured_post.autor1 %> <%= @featured_post.autor2 %> <%= @featured_post.autor3 %> <%= @featured_post.autor4 %></p>
+              <p>Autor: <%= @featured_post.autor %></p>
               <p>Escuela: <%= @featured_post.escuela.institu %></p>
               <p>Curso: <%= @featured_post.curso %></p>
               <p>Año: <%= @featured_post.fecha.year %></p>
-              <p>Docente: <%= @featured_post.docente.name %></p>
+              <p>Docente: <%= @featured_post.user.nombre %></p>
               <p>Provincia: <%= @featured_post.escuela.provi.prov %></p>
               <p>Fecha de creación: <%= @featured_post.fecha %></p>
-              <p>Inventario: <%= @featured_post.id %></p>
               <p>Comentario: <%= @featured_post.comentario %></p>
+              <p>Conocimientos: <%= @featured_post.conocimiento %></p>
             </div>
             <div class="span8">
               <!-- ACA EL CODIGO -->

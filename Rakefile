@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Maxprog::Application.load_tasks
+Md::Application.load_tasks

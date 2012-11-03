@@ -5,6 +5,6 @@ class Escuela < ActiveRecord::Base
   validates :provi_id, :presence => true
 
   belongs_to :provi, :inverse_of => :escuelas
-  has_many :docentes, :through => :posts
+  has_many :users, :through => :posts
   has_many :posts
 end
